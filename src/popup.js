@@ -63,7 +63,6 @@ const useAlert = (type, text, time) => {
 // loads in the themes 
 chrome.storage.sync.get(["themes"], (data) => {
   if (!data.themes) return
-  console.log(data)
   data.themes.forEach((el, i) => {
     if (!el.name) return
     let ht = /*html*/ `
@@ -130,7 +129,6 @@ chrome.storage.sync.get(["themes"], (data) => {
       slider.setAttribute("data-angle", dragamount);
 
       userColors["--sideColorGradient"] = userColors["--sideColorGradient"].replace(/\d*deg/gm, `${dragamount}deg`)
-      console.log(userColors["--sideColorGradient"])
       chrome.storage.sync.set({colors: userColors})
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, {
@@ -174,7 +172,6 @@ chrome.storage.sync.get(["themes"], (data) => {
     $(this)
     .find(".themeColor")
     .each((i, el) => {
-      console.log($(el))
       if ($(el).attr("data-color") == "--sideColorGradient") {
         userColors[$(el).attr("data-color")] = $(el).css("background");
       } else {
@@ -271,8 +268,6 @@ chrome.storage.sync.get(["themes"], (data) => {
     useAlert("success","Theme successfully edited! Reopen extension window to reflect changes.", 5000)
   })
   $('.cancelEdit').on('click', function(e) {
-    console.log(tempColors)
-    console.log(userColors)
     $("input#editColorModal").trigger("click");
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, {
@@ -286,7 +281,7 @@ chrome.storage.sync.get(["themes"], (data) => {
 
 // loads in previous colors if they exist, else default colors
 chrome.storage.sync.get(["colors"], (data) => {
-  if (data) {
+  if (data === {}) {
     $(".colorPreview").each(function (i) {
       $(this).css("background", data.colors[$(this).attr("data-color")]);
       $(this).prev().css("color", data.colors[$(this).attr("data-color")]);
@@ -574,9 +569,6 @@ $('label[for=confirmImportModal] button.yes').on('click', function(e) {
             chrome.storage.sync.set({themes: data.themes})
           })
         }
-        chrome.storage.sync.get(["themes"], (data) => {
-          console.log(data)
-        })
         useAlert("success", "Successfully exported themes! Reopen extension window to reflect changes.", 5000)
       } catch {
         useAlert("error", "File does not contain valid JSON!", 3000)

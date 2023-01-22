@@ -50,7 +50,7 @@ const updateColors = (newColors) => {
 chrome.storage.sync.get(["themes"], (data) => {
   if (!data.themes) {
     $.get(
-      "https://raw.githubusercontent.com/JDipi/PimpMyCanvas/main/includedthemes.json?token=GHSAT0AAAAAABZLT4EKDQ455BRTV6FBCPECY6BTH7Q",
+      "https://raw.githubusercontent.com/JDipi/PimpMyCanvas/master/includedthemes.json",
       function (data) {
         chrome.storage.sync.set({ themes: JSON.parse(data) });
       }
@@ -102,7 +102,6 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
   }
   
   if (req.action === "changeGradientSpeed") {
-    console.log(req.speed)
     $(":root").css("--gradientSpeed", `${req.speed}s`);
     if (!req.speed) {
       $(":root").css("--gradientBackgroundSize", "100% 100%")
