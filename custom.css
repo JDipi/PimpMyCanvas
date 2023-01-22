@@ -1,0 +1,481 @@
+:root{
+  --backgroundColor: "";
+  --sideColor: "";
+  --minorsideColor: ""; 
+  --newNotifColor: ""; 
+  --dangerColor: "";
+  --textColor: "";
+  --minortextColor: "";
+  --buttonbackColor: "";
+  --secondarybackgroundColor: "";
+  --tertiarybackgroundColor: "";
+  --hoverColor: "";
+  --iconColor: "";
+  --slimborderfixColor: "";
+  --gradientSpeed: "";
+  --gradientBackgroundSize: "";
+
+  --MlJlv-textColor: var(--textColor) !important;
+  --ic-brand-font-color-dark: var(--textColor) !important;
+  --bDBte-groupColor: var(--textColor) !important;
+  --cCGLM-color: var(--minortextColor) !important;
+  --eqmZq-color: var(--minortextColor) !important;
+  --eqmZq-background: var(--secondarybackgroundColor) !important;
+  --eqmZq-highlightedBackground: var(--hoverColor) !important;
+  --qBMHb-borderColor: var(--iconColor) !important;
+  --feqxT-color: var(--iconColor) !important;
+  --sJGfW-labelColor: var(--minorsideColor) !important;
+  --eoNrR-color: var(--minortextColor) !important;
+  --eAJaG-secondaryColor: var(--minortextColor) !important;
+  --jpyTq-color: var(--minortextColor) !important;
+  --qBMHb-color: var(--minortextColor) !important;
+  --brMfX-background: var(--backgroundColor) !important;
+  --XOwIb-defaultColor: var(--textColor) !important;
+  --blnAQ-borderColor: var(--minortextColor) !important;
+  --voGQb-color: var(--textColor) !important;
+  --cCGLM-secondaryColor: var(--minortextColor) !important;
+  --ic-brand-primary-darkened-15: var(--minorsideColor) !important;
+  --deLCD-meterColorBrand: var(--minorsideColor) !important;
+  --dNoYT-background: var(--backgroundColor) !important;
+  --ic-link-color-lightened-10: 0 !important;
+  --dyzZI-canvasBackgroundColor: 0 !important;
+  --fQfxa-primaryGhostColor: var(--minorsideColor) !important;
+  --dyzZI-canvasFocusBorderColor: var(--minorsideColor) !important;
+  --wIZqC-trackColor: var(--backgroundColor) !important;
+  --Spinner-inverseColor: var(--minorsideColor) !important;
+  --Spinner-color: var(--minorsideColor) !important;
+  --fQfxa-primaryInverseColor: var(--minortextColor) !important;
+  --fbyHH-focusOutlineColor: var(--minorsideColor) !important;
+  --sJGfW-background: var(--backgroundColor) !important;
+  --eoNrR-background: var(--backgroundColor) !important;
+  --yyQPt-focusBorderColor: var(--minorsideColor) !important;
+  --ic-brand-global-nav-bgd: var(--minorsideColor) !important;
+  --eqmZq-selectedBackground: var(--minorsideColor) !important;
+  --qBMHb-focusOutlineColor: var(--minorsideColor) !important;
+  --MlJlv-toggleFocusBorderColor: var(--minorsideColor) !important;
+  --fdyuz-background: var(--tertiarybackgroundColor) !important;
+  --eHzxc-background: var(--secondarybackgroundColor) !important;
+  --sJGfW-activeBackground: var(--hoverColor) !important;
+  --eMdva-infoBorderColor: var(--hoverColor) !important;
+  --eMdva-infoIconBackground: var(--hoverColor) !important;
+  --eHQDY-color: var(--minorsideColor) !important;
+  --cMptf-courseColor: var(--minorsideColor) !important;
+  --cAqHo-focusBorderColor: var(--minorsideColor) !important;
+  --fOyUs-focusColorInfo: var(--minorsideColor) !important;
+  --bDBte-titleBackground: var(--backgroundColor) !important; /* dashboard class name backgrounds Pretty Important if you wanna add grad or smth*/
+  --cAqHo-background: var(--backgroundColor) !important;
+  --erWSf-background: var(--backgroundColor) !important;
+  --ccWIh-background: var(--backgroundColor) !important;
+  --eAJaG-background: var(--backgroundColor) !important;
+  --dpCPB-background: var(--backgroundColor) !important;
+  --fwfoD-background: var(--backgroundColor) !important;
+  --dCppM-defaultBackground: var(--backgroundColor) !important;
+  --fOyUs-backgroundPrimary: var(--backgroundColor) !important;
+  --fLzZc-background: var(--backgroundColor) !important;
+  --pFBbo-color: var(--minortextColor) !important; /* dashboard dates text */
+  --fOyUs-borderColorBrand: var(--minortextColor) !important;
+  --fOyUs-backgroundBrand: 0 !important;
+  --dUOHu-primaryInverseColor: var(--minortextColor) !important;
+  --enRcg-primaryInverseColor: var(--minortextColor) !important;
+  --enRcg-brandColor: var(--minortextColor) !important;
+  --sJGfW-activeLabelColor: var(--buttonbackColor) !important;
+  --sJGfW-activeIconColor: var(--buttonbackColor) !important;
+  --dUOHu-brandColor: var(--minortextColor) !important; /* honestly no idea but the submit page on assignments is all weird cause of it for several stuff */
+  --ic-brand-primary: var(--minorsideColor) !important; /* hover on grades page */
+  --ic-brand-global-nav-menu-item__badge-text: var(--iconColor) !important;
+  --ic-brand-global-nav-ic-icon-svg-fill: var(--iconColor) !important;
+  --ic-brand-global-nav-menu-item__text-color: var(--iconColor) !important;
+  --feqxT-backgroundHover: var(--hoverColor) !important;
+  --ic-link-color-darkened-10: var(--minorsideColor) !important;
+  --fQfxa-primaryBorderColor: var(--hoverColor) !important;
+  --fQfxa-secondaryBorderColor: var(--hoverColor) !important;
+  /*--fQfxa-primaryColor: var(--buttonbackColor) !important; APPLY BUTTON ON GRADES PAGE, TESTING*/
+  --fQfxa-secondaryColor: var(--minortextColor) !important;
+  --fQfxa-primaryHoverBackground: var(--hoverColor) !important;
+  --fQfxa-primaryInverseBackground: var(--buttonbackColor) !important; /* so far its the Today button on dashboard */
+  --fQfxa-secondaryBackground: var(--buttonbackColor) !important; /* the background color of secondary buttons */
+  --qBMHb-background: var(--buttonbackColor) !important; /* the background color of a button */
+  --fbyHH-color: var(--textColor) !important; /* global text for assignments */
+  --fbyHH-hoverColor: var(--minorsideColor) !important; /* keeps text from changing colors when hoverd */
+  --ic-brand-global-nav-logo-bgd: 0 !important; /* color behind the custom school/organizations logo */
+  --cECYn-colorPrimary: var(--newNotifColor) !important; /* notification # corner */
+  --feqxT-background: var(--minorsideColor) !important; /* new activity button */
+  --cECYn-colorDanger: var(--dangerColor) !important; /* danger/late */
+  --dLyYq-dangerColor: var(--dangerColor) !important;
+  --dLyYq-infoColor: var(--newNotifColor) !important; /*late on grades page*/
+  --pFBbo-background: 0 !important;
+  --voGQb-background: 0 !important;
+  --ic-brand-global-nav-ic-icon-svg-fill--active: var(--textColor) !important; /* sidebar icons when selected */
+  --fQfxa-secondaryGhostColor: var(--textColor) !important; /* icons on dashboard top left */
+  --ic-link-color: var(--textColor) !important; /* sidebar text below icons when selected */
+
+}
+/* tox-edit-area active {
+  background-color: white;
+} */
+body {
+  transition: ease-in-out 300ms;
+  background: var(--backgroundColor) !important;
+  color: var(--textColor) !important;
+}
+#breadcrumbs>ul>li+li:last-of-type a, .ig-header .name, .ig-list .ig-row, .item-group-condensed .ig-header, .faJyW_blJt, .ctrLD_bGBk, .question .header .question_points_holder, .pages.show .page-title{
+  color: var(--textColor) !important;
+}
+.module-sequence-footer-button--previous .Button, .module-sequence-footer-button--next .Button{
+  background: var(--tertiarybackgroundColor) !important
+}
+#student-grades-show-all .Button {
+  background: var(--buttonbackColor) !important
+}
+#global_nav_dashboard_link {
+  text-decoration: none;
+}
+.message-middle-column * {
+  color: var(--minortextColor) !important;
+}
+.message-list .messages>li {
+  background: var(--secondarybackgroundColor) !important;
+}
+.message-list .messages>li.active {
+  background: var(--tertiarybackgroundColor) !important;
+}
+.enRcg_bGBk.enRcg_bLsb {
+  color: var(--minortextColor) !important;
+}
+.btn, #right-side .right-side-list li a>i, [dir="ltr"] .bgKsu_blJt, .message-detail.conversations__message-detail .no-messages, .dUOHu_drOs {
+  color: var(--textColor) !important;
+}
+.dUOHu_drOs .StickyButton-styles__layout {
+  color: var(--iconColor) !important
+}
+[dir="ltr"] .qBMHb_cwos.qBMHb_EMjX, [dir="ltr"] input[type].qBMHb_cwos.qBMHb_EMjX {
+  color: var(--textColor) !important
+}
+.ig-header .name {
+  text-shadow: none !important;
+}
+.ig-list .ig-row a.ig-title, #right-side .right-side-list li p, .fCrpb_egrg, .Button, #grades_summary th.title .context {
+  color: var(--minortextColor) !important;
+}
+.list-view a.active {
+  color: var(--minorsideColor) !important;
+}
+.Button.Button--primary:hover {
+  background: var(--hoverColor) !important;
+}
+
+.ui-dialog .ui-dialog-titlebar.ui-widget-header, .ui-dialog .ui-dialog-title{
+  font-weight: bold;
+  font-size: 22px;
+}
+.ic-app-header { /* SIDEBAR */
+  animation: gradient 10s ease infinite;
+  background: var(--sideColor);
+  background-size: 100% 500%;
+  transition: ease-in-out 300ms;
+}
+.navigation-tray-container, .header-bar, .ic-app-nav-toggle-and-crumbs, #breadcrumbs, .assignment-student-header {
+  background: var(--backgroundColor) !important;
+  transition: ease-in-out 300ms;
+}
+.ic-app-header__menu-list-item.ic-app-header__menu-list-item--active .ic-app-header__menu-list-link {
+  background: var(--backgroundColor) !important;
+}
+.ic-DashboardCard__action-badge {
+  background-size: 300% 300%;
+}
+.ic-Dashboard-header__layout, .ic-notification__content {
+  background: var(--backgroundColor) !important;
+}
+.large.ic-Dashboard-header__layout, .react-rubric td, .react-rubric th {
+  background: var(--backgroundColor) !important;
+  opacity: 0.95;
+  transition: ease-in-out 300ms;
+}
+.PlannerHeader-styles__root.PlannerHeader, #minical, .module-sequence-footer .module-sequence-footer-content, .file-upload-submission, #questions.assessing, #calendar-app .fc-month-view .fc-body, #calendar-drag-and-drop-container .fc-month-view .fc-body, #calendar-list-holder, #other-calendars-list-holder, #undated-events, table.summary td, table.summary tbody th, .Day-styles__root, .item-group-container, .dialog_opener.Button.Button--link, .fOyUs_bGBk .fOyUs_bGBk.fOyUs_desw.bDzpk_bGBk.bDzpk_busO.bDzpk_cQFX.bDzpk_bZNM .fOyUs_bGBk.fOyUs_fKlg.dJCgj_bGBk {
+  background: 0;
+}
+#calendar-app .fc-month-view .fc-today, #calendar-drag-and-drop-container .fc-month-view .fc-today, .item-group-condensed .ig-header, #questions.assessment_results .question .header, .conversations .panel, .question .header, .ic-notification__icon, .ic-Action-header .ic-Action-header__Secondary>.Button, .ic-Action-header .ic-Action-header__Secondary>.btn, .ic-Action-header .ic-Action-header__Secondary>.ui-button{
+  background: var(--secondarybackgroundColor) !important;
+  transition: ease-in-out 300ms;
+}
+.group_user_8655, .group_user_8655:hover, .group_user_8655:focus, .ui-button:hover {
+  background-color: var(--hoverColor) !important;
+}
+#minical .fc-widget-content {
+  border: 1px solid transparent;
+}
+#assignments-student-footer, .submission-details-comments .comments {
+  background: var(--backgroundColor) !important;
+  transition: ease-in-out 300ms;
+}
+.ui-button, #right-side .button-sidebar-wide, select {
+  background: var(--buttonbackColor) !important;
+  transition: ease-in-out 300ms;
+}
+p span, h2 span, table span, .user_content a:not(.btn):not(.Button):not(.ui-button):not([role=button]), .mceContentBody a:not(.btn):not(.Button):not(.ui-button):not([role=button]){
+  background: 0 !important; /* text on the home page */
+}
+#right-side .events_list .event-details:after, #right-side .events_list .todo-details:after, #right-side .to-do-list .event-details:after, #right-side .to-do-list .todo-details:after {
+  background: var(--hoverColor) !important;
+  transition: ease-in-out 300ms;
+}
+.btn.active:hover, .btn:hover {
+  background: var(--hoverColor) !important;
+  transition: ease-in-out 300ms;
+}
+.btn, .fOyUs_bGBk.eIQkd_bGBk .fwfoD_bGBk.fwfoD_fsuY.fwfoD_EMjX {
+  background: var(--tertiarybackgroundColor) !important; /* background of buttons but also some text */
+}
+.fOyUs_bGBk.fOyUs_desw.bDzpk_bGBk.bDzpk_busO.bDzpk_cQFX.bDzpk_bZNM .fOyUs_bGBk.fOyUs_fKlg.dJCgj_bGBk .fOyUs_bGBk {
+  background: 0; /* Submit spaceship image background, may be others */
+}
+.fOyUs_fKyb { /* immersive reader button */
+  background: var(--backgroundColor) !important;
+  transition: ease-in-out 300ms;
+}
+#right-side .button-sidebar-wide:hover {
+  background: var(--hoverColor) !important;
+  transition: ease-in-out 300ms;
+}
+.item-group-condensed .ig-row, .question .text, .ic-DashboardCard, .ic-DashboardCard__header_content {
+  background: var(--tertiarybackgroundColor) !important;
+}
+.item-group-condensed .ig-row {
+  transition: 150ms ease-in-out;
+  border-top-width: 1px;
+}
+.ig-list .ig-row:hover, .btn-primary {
+  background: var(--hoverColor) !important;
+  border-color: var(--textColor) !important;
+}
+.list-view>ul>li>a:hover, .list-view>nav>ul>li>a:hover, .list-view>div>nav>ul>li>a:hover {
+  color: var(--hoverColor) !important;
+}
+.menu-item__badge, .nav-badge {
+  background: var(--newNotifColor) !important;
+}
+.tox .tox-toolbar, .tox .tox-toolbar__overflow, .tox .tox-toolbar__primary {
+  background: var(--tertiarybackgroundColor) !important;
+} 
+.fQfxa_caGd.fQfxa_ImeN, [dir="ltr"] .fQfxa_caGd.fQfxa_ImeN{
+  background: var(--hoverColor) !important;
+  border-color: var(--minorsideColor) !important;
+}
+.fQfxa_dqAF.fQfxa_eCSh {
+  background: var(--minorsideColor) !important;
+}
+.fQfxa_dqAF.fQfxa_buuG{
+  background: var(--secondarybackgroundColor) !important;
+}
+.XOwIb_ddES[aria-selected]::after, .Button--primary {
+  background: var(--minorsideColor) !important;
+}
+.quiz-submission, .question_editing {
+  background: 0;
+  border: 0;
+}
+.ViewerControls, .AnnotationControlButton, .btn-primary:hover, .Button--primary:hover, .btn.active {
+  background: var(--minorsideColor) !important;
+}
+.take_quiz_button .btn {
+  background: var(--hoverColor) !important;
+}
+#tinymce {
+  background: white;
+}
+.AnnotationControlButton-outer {
+  border: 0;
+}
+.ic-app-header__menu-list-link .ic-icon-svg {
+  transition: ease-in-out 300ms;
+}
+.react-rubric td, .react-rubric th, .react-rubric .rating-tier, .assignment-student-header, .ic-app-nav-toggle-and-crumbs {
+  border-color: var(--slimborderfixColor) !important;
+}
+path[fill="#67C1F0"]{
+  fill: var(--secondarybackgroundColor) !important;
+  transition: ease-in-out 300ms;
+}
+path[fill="#9BE1A4"]{
+  fill: var(--hoverColor) !important;
+  transition: ease-in-out 300ms;
+}
+
+/* sidebar gradient background animation */
+
+.gradient
+{
+  /* height:300px;
+  width:300px;
+  border:1px solid black;
+  font-size:30px; */
+  /* background: linear-gradient(130deg, #ff7e00, #ffffff, #5cff00); */
+  /* background-size: var(--gradientBackgroundSize); */
+  animation: gradient var(--gradientSpeed) ease infinite !important;
+}
+
+@keyframes gradient {
+0% {background-position: 0% 0%;}
+50% {background-position: 100% 100%;}
+100% {background-position: 0% 0%;}
+}
+/* @-webkit-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@-moz-keyframes Animation {
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+}
+@keyframes Animation { 
+  0%{background-position:10% 0%}
+  50%{background-position:91% 100%}
+  100%{background-position:10% 0%}
+} */
+
+#pmcdiv {
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.7rem;
+}
+#pmcinput {
+  inset-inline: 0px auto;
+  opacity: 0.0001;
+  padding: 0px;
+  position: absolute;
+  top: 0px;
+}
+#pmcspan {
+  margin-top: 8px;
+  --faJyW-background: #2D3B45;
+  --faJyW-borderColor: #2D3B45;
+  --faJyW-checkedBackground: #127A1B;
+  --faJyW-checkedIconColor: #127A1B;
+  --faJyW-focusOutlineColor: 0 !important;
+}
+.pmcControls {
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pmcSettingsInput {
+  margin-bottom: 10px;
+}
+
+#pmcControlText {
+  font-size: 1rem;
+  text-rendering: optimizeLegibility;
+  margin: 5px 0;
+  line-height: 1.5;
+  font-family: var(--fOyUs-fontFamily);
+  color: var(--minortextColor) !important
+}
+.ColorSelector{
+  width: 50px;
+  height: 30px !important;
+  padding: 0px 2px !important;
+  margin-bottom: 0 !important;
+  transition: 150ms ease-in-out !important;
+}
+.ColorSelector:hover {
+  background: #EDEDED;
+}
+.sp-replacer{
+  float: right;
+}
+#pmcGradientSwitch {
+  height: 33px;
+  padding: 6px 2.8px;
+  animation: gradient 5s ease infinite;
+  transition: ease-in-out 300ms;
+  background: var(--sideColor) !important;
+  border: 0;
+  justify-content: center;
+  align-content: center;
+  border-radius: 13px;
+  background-size: 100% 1000%;
+} 
+#pmcGradientText {
+  color: var(--textColor) !important;
+  padding: 6.5px;
+  background: var(--backgroundColor) !important;
+  border-radius: 10px;
+  transition: ease-in-out 300ms;
+  font-size: 15px;
+
+}
+#pmcGradientText:hover {
+  background: none;
+  color: var(--iconColor) !important;
+}
+#customGradientdiv {
+  display: flex;
+  align-items: stretch;
+}
+#customGradient {
+  margin-bottom: 0;
+}
+#customGradButton {
+  margin-left: 8px;
+}
+
+/* Both are used for the modal background darken*/
+.ui-dialog.ui-widget-content {
+  z-index: 9999;
+}
+.ui-widget-overlay.modal-opened{
+  background: rgb(0, 0, 0);
+  opacity: 0.5;
+  filter: Alpha(Opacity=50); 
+  position: fixed;
+}
+.containerTheme {
+  margin: 0;
+  display: grid;
+  grid-gap: 10px 15px;
+
+  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-rows: 14rem 14rem 14rem;
+}
+.singleTheme {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 10px;
+  margin: 0;
+  background: #F6F6F6;
+  padding-bottom: 0;
+  box-shadow: 0px 0px 6px 5px rgba(145, 145, 145, 0.5);
+  transition: 100ms ease-in-out;
+}
+.singleTheme:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 1px 0px rgba(145, 145, 145, 0.2);
+}
+
+.colorsForTheme {
+  width: 2rem;
+  height: 2em;
+  margin: 0;
+  justify-content: center;
+  display: table-cell;
+  background: orange;
+}
+.colorTiles {
+  border: 4px solid;
+  border-color: #5a5a5a;
+  border-radius: 5px;
+}
+.themeImage {
+  display: flex;
+  margin: auto;
+  max-height: 70%;
+}
+.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix { /* The title text in Modal */
+  padding-left: 20px;
+}
