@@ -25,7 +25,6 @@
     "matches": ["https://*.instructure.com/*"]
   }],
   "permissions": [
-    "storage",
-    "tabs"
+    "storage"
   ]
 }
