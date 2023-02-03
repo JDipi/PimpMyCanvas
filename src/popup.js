@@ -281,7 +281,7 @@ chrome.storage.sync.get(["themes"], (data) => {
 
 // loads in previous colors if they exist, else default colors
 chrome.storage.sync.get(["colors"], (data) => {
-  if (data === {}) {
+  if (data) {
     $(".colorPreview").each(function (i) {
       $(this).css("background", data.colors[$(this).attr("data-color")]);
       $(this).prev().css("color", data.colors[$(this).attr("data-color")]);
