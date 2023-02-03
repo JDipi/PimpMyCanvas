@@ -1,5 +1,37 @@
 # PimpMyCanvas
 
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
+
+
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/JDipi/impMyCanvas">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+
+<h3 align="center">project_title</h3>
+
+  <p align="center">
+    project_description
+    <br />
+    <a href="https://github.com/JDipi/impMyCanvas"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/JDipi/impMyCanvas">View Demo</a>
+    ·
+    <a href="https://github.com/JDipi/impMyCanvas/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/JDipi/impMyCanvas/issues">Request Feature</a>
+  </p>
+</div>
+
+
 ## By JDipi and [ExternalHost0](https://github.com/ExternalHost0)
 Chrome extension for customizing the Canvas LMS UI
 
@@ -74,3 +106,18 @@ Here are some features that may be included in a newer update:
  - A button to load the default themes
  - A gradient editor that is independent of coolors.co, hopefully like [this](https://cssgradient.io/) 
  - General style changes
+
+
+
+[contributors-shield]: https://img.shields.io/github/contributors/JDipi/PimpMyCanvas.svg?style=for-the-badge
+[contributors-url]: https://github.com/JDipi/PimpMyCanvas/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/JDipi/PimpMyCanvas.svg?style=for-the-badge
+[forks-url]: https://github.com/JDipi/PimpMyCanvas/network/members
+[stars-shield]: https://img.shields.io/github/stars/JDipi/PimpMyCanvas.svg?style=for-the-badge
+[stars-url]: https://github.com/JDipi/PimpMyCanvas/stargazers
+[issues-shield]: https://img.shields.io/github/issues/JDipi/PimpMyCanvas.svg?style=for-the-badge
+[issues-url]: https://github.com/JDipi/PimpMyCanvas/issues
+[license-shield]: https://img.shields.io/github/license/JDipi/PimpMyCanvas.svg?style=for-the-badge
+[license-url]: https://github.com/JDipi/PimpMyCanvas/blob/master/LICENSE.txt
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/linkedin_username
