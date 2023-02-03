@@ -11,11 +11,10 @@ ___
 
 ### Installation
 
-1. Download the latest release from GitHub
-2. Go to the Chrome Extensions page (```chrome://extensions```) and ensure you have developer mode turned on in the upper right
-3. Drag and drop the downloaded .crx file onto the extensions page
-4. Approve the extension
-5. Done!
+You can now download the extension from the Chrome Web Store linked below:
+# [INSTALL HERE](https://chrome.google.com/webstore/detail/pimpmycanvas/bgpoafmllopbhciofdpjfeoaadfhhhnd)
+
+If you want to manually download the extension go to the releases page on this repository.
 
 ___
 
