@@ -18,7 +18,7 @@
 <h3 align="center">PimpMyCanvas</h3>
 
   <p align="center">
-Chrome extension for customizing the Canvas LMS UI
+A Chrome extension for customizing the Canvas LMS User Interface
     <br />
     <a href="https://github.com/JDipi/impMyCanvas/issues">Report Bug</a>
     ·
@@ -60,7 +60,7 @@ Chrome extension for customizing the Canvas LMS UI
   </ol>
 </details>
 
-### About The Project
+## About The Project
 
 #### By JDipi and [ExternalHost0](https://github.com/ExternalHost0)
 ##### PimpMyCanvas is a lightweight Chrome extension for customizing the Canvas LMS User Interface
@@ -69,7 +69,7 @@ This Chrome extension based off of a Tampermonkey userscript my friend ExternalH
 
 
 
-### Built With
+## Built With
 
 * [![JQuery][JQuery.com]][JQuery-url]
 * [![Tailwind][tailwind-shield]][Tailwind-url]
@@ -79,11 +79,11 @@ This Chrome extension based off of a Tampermonkey userscript my friend ExternalH
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Getting Started
+## Getting Started
 
 
 
-### Installation
+## Installation
 
 You can download the extension from the Chrome Web Store linked below:
 ### [INSTALL HERE](https://chrome.google.com/webstore/detail/pimpmycanvas/bgpoafmllopbhciofdpjfeoaadfhhhnd)
@@ -93,12 +93,15 @@ If you want to manually download the extension go to the releases page on this r
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Usage
+## Usage
 
 Navigate to any Canvas domain and click the extension icon in the top right. This will show the extension window, which looks like this:
 <p align="center">
   <img src="https://user-images.githubusercontent.com/48573618/211132722-ecffa4ae-6085-4497-9698-a15ffa801613.png" />
 </p>
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 #### Colors
 
@@ -147,7 +150,7 @@ The settings tab has several miscellaneous options, such as importing / exportin
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Roadmap
+## Roadmap
 - [ ] Add gradient preview swatches
 - [ ] Better style for gradient animation speed control
 - [ ] Find an alternative to Google Forms for the submission of custom themes
@@ -157,7 +160,7 @@ The settings tab has several miscellaneous options, such as importing / exportin
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-### Contributing
+## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -188,6 +191,9 @@ Send us a message! - [pimpmycanvas@googlegroups.com](mailto:pimpmycanvas@googleg
 ## Acknowledgments
 
 * Thank you to my friend [ExternalHost0](https://github.com/ExternalHost0) for making the [userscript](https://github.com/ExternalHost0/PimpMyCanvas) that inspired this extension!
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 [contributors-shield]: https://img.shields.io/github/contributors/JDipi/PimpMyCanvas.svg?style=for-the-badge
