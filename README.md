@@ -15,7 +15,7 @@
     <img src="logo.svg" alt="Logo" width="150">
   </a>
 
-<h3 align="center">PimpMyCanvas</h3>
+<h3 align="center">Pimp My Canvas</h3>
 
   <p align="center">
 A Chrome extension for customizing the Canvas LMS User Interface
@@ -63,7 +63,7 @@ A Chrome extension for customizing the Canvas LMS User Interface
 ## About The Project
 
 #### By JDipi and [ExternalHost0](https://github.com/ExternalHost0)
-##### PimpMyCanvas is a lightweight Chrome extension for customizing the Canvas LMS User Interface
+##### Pimp My Canvas is a lightweight Chrome extension for customizing the Canvas LMS User Interface
 
 This Chrome extension based off of a Tampermonkey userscript my friend ExternalHost0 made. You can find his script [here](https://github.com/ExternalHost0/PimpMyCanvas).
 

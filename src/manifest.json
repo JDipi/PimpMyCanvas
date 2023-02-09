@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "PimpMyCanvas",
+  "name": "Pimp My Canvas",
   "description": "Style Canvas your way!",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "icons": {
     "16": "/images/logo16.png",
     "48": "/images/logo48.png",
@@ -10,7 +10,7 @@
   },
   "action": {
     "default_popup": "popup.html",
-    "default_title": "PimpMyCanvas"
+    "default_title": "Pimp My Canvas"
   },
 
   "content_scripts": [
