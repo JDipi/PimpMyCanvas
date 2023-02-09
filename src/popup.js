@@ -579,6 +579,22 @@ $('label[for=confirmImportModal] button.yes').on('click', function(e) {
   $('input#confirmImportModal').trigger('click')
 })
 
+$(".globalEnable").on('change', function(e) {
+  if ($(this).is(":checked")) {
+    chrome.storage.sync.set({enabled: true})
+  } else {
+    chrome.storage.sync.set({enabled: false})
+  }
+  chrome.storage.sync.get(["enabled"], (data) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, {
+        action: "enable",
+        mode: data.enabled,
+      });
+    });
+  })
+})
+
 // when the user clicks to export their themes, get the themes from storage and send a message to download them
 $('button.export').on('click', function(e) {
   chrome.storage.sync.get(['themes'], (data) => {

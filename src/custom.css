@@ -89,7 +89,7 @@
   --ic-link-color-darkened-10: var(--minorsideColor) !important;
   --fQfxa-primaryBorderColor: var(--hoverColor) !important;
   --fQfxa-secondaryBorderColor: var(--hoverColor) !important;
-  /*--fQfxa-primaryColor: var(--buttonbackColor) !important; APPLY BUTTON ON GRADES PAGE, TESTING*/
+  --fQfxa-primaryColor: var(--textColor) !important; /* APPLY BUTTON ON GRADES PAGE, TESTING */
   --fQfxa-secondaryColor: var(--minortextColor) !important;
   --fQfxa-primaryHoverBackground: var(--hoverColor) !important;
   --fQfxa-primaryInverseBackground: var(--buttonbackColor) !important; /* so far its the Today button on dashboard */
@@ -108,7 +108,7 @@
   --ic-brand-global-nav-ic-icon-svg-fill--active: var(--textColor) !important; /* sidebar icons when selected */
   --fQfxa-secondaryGhostColor: var(--textColor) !important; /* icons on dashboard top left */
   --ic-link-color: var(--textColor) !important; /* sidebar text below icons when selected */
-
+  --ceSQR-canvasBackgroundColor: var(--tertiarybackgroundColor) !important; /* tinyMCE menubar */
 }
 /* tox-edit-area active {
   background-color: white;
@@ -150,6 +150,9 @@ body {
 }
 [dir="ltr"] .qBMHb_cwos.qBMHb_EMjX, [dir="ltr"] input[type].qBMHb_cwos.qBMHb_EMjX {
   color: var(--textColor) !important
+}
+input[type="text"] {
+  height: 35px;
 }
 .ig-header .name {
   text-shadow: none !important;
@@ -302,6 +305,25 @@ path[fill="#9BE1A4"]{
   transition: ease-in-out 300ms;
 }
 
+.item-group-container, #questions.assessing, .module-sequence-footer-content{
+  background-color: var(--backgroundColor) !important;
+}
+
+input[type="text"].question_input {
+  height: 40px !important;
+}
+
+button[data-btn-id].fOyUs_fKyb {
+  background-color: var(--tertiarybackgroundColor) !important;
+}
+
+table.summary * {
+  background-color: var(--backgroundColor) !important;
+}
+
+.StickyButton-styles__layout {
+  background-color: var(--newNotifColor) !important;
+}
 /* sidebar gradient background animation */
 
 .gradient
