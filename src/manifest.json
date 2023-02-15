@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Pimp My Canvas",
   "description": "Style Canvas your way!",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "icons": {
     "16": "/images/logo16.png",
     "48": "/images/logo48.png",
