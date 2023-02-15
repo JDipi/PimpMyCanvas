@@ -22,11 +22,11 @@
   "background": {
     "service_worker": "eventPage.js"
   },
-  "web_accessible_resources": [{
-    "resources": ["custom.css"],
-    "matches": ["https://*.instructure.com/*"]
-  }],
-  "permissions": [
-    "storage"
-  ]
+  "web_accessible_resources": [
+    {
+      "resources": ["custom.css"],
+      "matches": ["https://*.instructure.com/*"]
+    }
+  ],
+  "permissions": ["storage"]
 }

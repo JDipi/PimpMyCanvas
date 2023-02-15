@@ -64,22 +64,34 @@ const updateColors = (newColors) => {
 };
 
 const enable = (mode) => {
+  console.log(mode)
   if (mode) {
-    let styles = chrome.runtime.getURL("custom.css")
-    $('head').append($('<link>').attr("rel","stylesheet").attr("type","text/css").attr("href", styles).addClass("injected"));
+    var path = chrome.runtime.getURL("custom.css");
+    $("head")
+      .append(
+        $("<link>")
+          .attr("rel", "stylesheet")
+          .attr("type", "text/css")
+          .attr("href", path)
+          .addClass("injected")
+      )
+      
+    chrome.storage.sync.get(["colors"], (data) => {
+      updateColors(data.colors)
+    })
   } else {
-    $('link.injected').detach()
+    $("link.injected").detach();
     //TODO: fix remove style from html tag
-    $("html").removeAttr('style')
+    $("html").removeAttr("style");
   }
-}
+};
 chrome.storage.sync.get(["enabled"], (data) => {
   if (data.enabled) {
-    enable(true)
+    enable(true);
   } else {
-    enable(false)
+    enable(false);
   }
-})
+});
 
 // if this is the user's first launch, fetch the themes from github and save them in storage
 chrome.storage.sync.get(["themes"], (data) => {
@@ -172,6 +184,23 @@ chrome.runtime.onMessage.addListener((req, sender, res) => {
   }
 
   if (req.action === "enable") {
-    enable(req.mode)
+    enable(req.mode);
   }
 });
+
+$(document).ready(function () {
+  console.log("ready");
+  var path = chrome.runtime.getURL("custom.css");
+  $("head")
+    .append(
+      $("<link>")
+        .attr("rel", "stylesheet")
+        .attr("type", "text/css")
+        .attr("href", path)
+    )
+    .addClass("test");
+});
+
+chrome.storage.sync.get(["enabled"], (data) => {
+  enable(data.enable)
+})

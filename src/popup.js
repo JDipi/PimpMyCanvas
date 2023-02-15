@@ -13,7 +13,8 @@ Things to add in the future:
 let userColors = {
   "--backgroundColor": "#faebd7",
   "--sideColor": "#ff6536",
-  "--sideColorGradient": "linear-gradient(0deg, #161616, #00171f, #003459, #007ea7, #00a8e8)",
+  "--sideColorGradient":
+    "linear-gradient(0deg, #161616, #00171f, #003459, #007ea7, #00a8e8)",
   "--minorsideColor": "#ffffff",
   "--textColor": "#03081f",
   "--minortextColor": "#ffffff",
@@ -27,44 +28,55 @@ let userColors = {
   "--buttonbackColor": "#ffffff",
   "--slimborderfixColor": "#c7cdd1",
 };
-let tempColors
+let tempColors;
 
 const useAlert = (type, text, time) => {
-  let $alert = $('div.alert')
-  $alert.removeClass()
-  $alert.addClass('transition-all opacity-100 w-fit fixed p-2 m-2 z-[1000] right-0 bottom-0 px-4 font-bold')
-  $alert.find('svg').remove()
+  let $alert = $("div.alert");
+  $alert.removeClass();
+  $alert.addClass(
+    "transition-all opacity-100 w-fit fixed p-2 m-2 z-[1000] right-0 bottom-0 px-4 font-bold"
+  );
+  $alert.find("svg").remove();
 
   if (type === "success") {
-    $alert.addClass('alert alert-success shadow-lg')
-    $(`<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`).insertBefore($alert.find('span'))
+    $alert.addClass("alert alert-success shadow-lg");
+    $(
+      `<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
+    ).insertBefore($alert.find("span"));
   } else if (type === "info") {
-    $alert.addClass('alert alert-info shadow-lg')
-    $(`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`).insertBefore($alert.find('span'))
+    $alert.addClass("alert alert-info shadow-lg");
+    $(
+      `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`
+    ).insertBefore($alert.find("span"));
   } else if (type === "warning") {
-    $alert.addClass('alert alert-warning shadow-lg')
-    $(`<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`).insertBefore($alert.find('span'))
+    $alert.addClass("alert alert-warning shadow-lg");
+    $(
+      `<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`
+    ).insertBefore($alert.find("span"));
   } else if (type === "error") {
-    $alert.addClass('alert alert-error shadow-lg')
-    $(`<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`).insertBefore($alert.find('span'))
+    $alert.addClass("alert alert-error shadow-lg");
+    $(
+      `<svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`
+    ).insertBefore($alert.find("span"));
   } else if (type === "alert") {
-    $alert.addClass('alert')
-    $(`<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`).insertBefore($alert.find('span'))
+    $alert.addClass("alert");
+    $(
+      `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-info flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>`
+    ).insertBefore($alert.find("span"));
   }
 
-  $alert.find('span').text(text)
+  $alert.find("span").text(text);
 
   setTimeout(() => {
-    $alert.addClass('opacity-0')
-  }, time)
-}
+    $alert.addClass("opacity-0");
+  }, time);
+};
 
-
-// loads in the themes 
+// loads in the themes
 chrome.storage.sync.get(["themes"], (data) => {
-  if (!data.themes) return
+  if (!data.themes) return;
   data.themes.forEach((el, i) => {
-    if (!el.name) return
+    if (!el.name) return;
     let ht = /*html*/ `
     <input type='radio' id="${i}" name="theme" class="hidden"/>
     <div class="relative w-full" verified=${el.verified ? "true" : "false"}>
@@ -79,19 +91,25 @@ chrome.storage.sync.get(["themes"], (data) => {
       <label for="${i}" class="theme card cursor-pointer bg-base-300 w-full flex items-center justify-center p-4 rounded-box transition-colors hover:border border-primary">
         <h3 class="font-bold mb-2 text-lg flex items-center gap-2 w-full">
           ${el.name}
-          <div title="${el.verified ? "Verified Theme" : "User Theme"}" class="badge badge-outline">${el.verified ? "★" : "👤"}</div>
+          <div title="${
+            el.verified ? "Verified Theme" : "User Theme"
+          }" class="badge badge-outline">${el.verified ? "★" : "👤"}</div>
         </h3>
         <div title="${el.name}" class="w-full">
           <img class="themeImage" src="${el.img}"/>
           <div class="flex my-1 w-full h-[1.1rem] w-full">`;
-            for (let [key, val] of Object.entries(el.colors)) {
-              ht = ht + `<div class="themeColor flex-1" style="background: ${val}" data-color="${key}"></div>`;
-            }
-            ht = ht + /*html*/`
+    for (let [key, val] of Object.entries(el.colors)) {
+      ht =
+        ht +
+        `<div class="themeColor flex-1" style="background: ${val}" data-color="${key}"></div>`;
+    }
+    ht =
+      ht +
+      /*html*/ `
           </div>
         </div>  
       </label>
-    </div>`
+    </div>`;
     $(ht).appendTo(".themes");
   });
 
@@ -100,19 +118,18 @@ chrome.storage.sync.get(["themes"], (data) => {
   let moveX = false;
 
   let dragging;
-  let dragamount
+  let dragamount;
 
   // if the user has set an angle before, make that the current angle of the angle input
   chrome.storage.sync.get(["gradientAngle"], (data) => {
     if (data.gradientAngle) {
-      dragamount = data.gradientAngle
+      dragamount = data.gradientAngle;
     } else {
       dragamount = 0;
     }
-    $(":root").css("--initialPosition", `${dragamount}deg`)
-  })
+    $(":root").css("--initialPosition", `${dragamount}deg`);
+  });
 
-  
   let angleControl = document.querySelector(".angleControl");
   let slider = document.querySelector(".slider");
 
@@ -128,8 +145,10 @@ chrome.storage.sync.get(["themes"], (data) => {
       slider.style.transform = `translate(-50%, -50%) rotate(${dragamount}deg)`;
       slider.setAttribute("data-angle", dragamount);
 
-      userColors["--sideColorGradient"] = userColors["--sideColorGradient"].replace(/\d*deg/gm, `${dragamount}deg`)
-      chrome.storage.sync.set({colors: userColors})
+      userColors["--sideColorGradient"] = userColors[
+        "--sideColorGradient"
+      ].replace(/\d*deg/gm, `${dragamount}deg`);
+      chrome.storage.sync.set({ colors: userColors });
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, {
           action: "colorsChanged",
@@ -140,134 +159,178 @@ chrome.storage.sync.get(["themes"], (data) => {
   });
   angleControl.addEventListener("mousedown", (e) => {
     dragging = true;
-    $('body').css({
-        "-webkit-touch-callout": "none",
-        "-webkit-user-select": "none",
-        "-khtml-user-select": "none",
-        "-moz-user-select": "none",
-        "-ms-user-select": "none",
-        "user-select": "none",
-    })
+    $("body").css({
+      "-webkit-touch-callout": "none",
+      "-webkit-user-select": "none",
+      "-khtml-user-select": "none",
+      "-moz-user-select": "none",
+      "-ms-user-select": "none",
+      "user-select": "none",
+    });
   });
   window.addEventListener("mouseup", (e) => {
-    chrome.storage.sync.set({gradientAngle: dragamount})
+    chrome.storage.sync.set({ gradientAngle: dragamount });
     dragging = false;
-    $('body').css({
-        "-webkit-touch-callout": "auto",
-        "-webkit-user-select": "auto",
-        "-khtml-user-select": "auto",
-        "-moz-user-select": "auto",
-        "-ms-user-select": "auto",
-        "user-select": "auto",
-    })
+    $("body").css({
+      "-webkit-touch-callout": "auto",
+      "-webkit-user-select": "auto",
+      "-khtml-user-select": "auto",
+      "-moz-user-select": "auto",
+      "-ms-user-select": "auto",
+      "user-select": "auto",
+    });
   });
-  
-  
 
   //TODO: export themes button
-  
+
   // when you click on a theme, change all of the colors based on the swatches
   $("label.theme").on("click", function (e) {
-    // $(this).prev()
-    $(this)
-    .find(".themeColor")
-    .each((i, el) => {
-      if ($(el).attr("data-color") == "--sideColorGradient") {
-        userColors[$(el).attr("data-color")] = $(el).css("background");
-      } else {
-
-        userColors[$(el).attr("data-color")] = $(el).css("background-color");
-      }
+    $(".globalEnable").prop("checked", true);
+    chrome.storage.sync.set({ enabled: true });
+    chrome.storage.sync.get(["enabled"], (data) => {
       chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
         chrome.tabs.sendMessage(tabs[0].id, {
-          action: "colorsChanged",
-          newColors: userColors,
+          action: "enable",
+          mode: data.enabled,
         });
       });
     });
+    // $(this).prev()
+    $(this)
+      .find(".themeColor")
+      .each((i, el) => {
+        if ($(el).attr("data-color") == "--sideColorGradient") {
+          userColors[$(el).attr("data-color")] = $(el).css("background");
+        } else {
+          userColors[$(el).attr("data-color")] = $(el).css("background-color");
+        }
+        chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+          chrome.tabs.sendMessage(tabs[0].id, {
+            action: "colorsChanged",
+            newColors: userColors,
+          });
+        });
+      });
 
     // change each of the color previews in the colors menu
     $(".colorPreview").each(function (i) {
       $(this).css("background", userColors[$(this).attr("data-color")]);
 
-      // bc the colors are in this format, use regex to get the rgb only 
+      // bc the colors are in this format, use regex to get the rgb only
       // rgb(18, 18, 18) none repeat scroll 0% 0% / auto padding-box border-box
       try {
-        $(this).prev().css("color", userColors[$(this).attr("data-color")].match(/rgb\(.*\)/gm));
+        $(this)
+          .prev()
+          .css(
+            "color",
+            userColors[$(this).attr("data-color")].match(/rgb\(.*\)/gm)
+          );
       } catch {
         $(this).prev().css("color", userColors[$(this).attr("data-color")]);
       }
     });
-    
+
     chrome.storage.sync.set({ colors: userColors });
-    
+
     chrome.storage.sync.set({ currentThemeNum: $(this).attr("for") });
   });
-  
+
   // if the user refreshes and has a theme selected, apply the theme automatically
   chrome.storage.sync.get(["currentThemeNum"], (data) => {
     if (data.currentThemeNum) {
-      $(`label.theme[for="${data.currentThemeNum}"]`).parent().prev().attr("checked", true);
+      $(`label.theme[for="${data.currentThemeNum}"]`)
+        .parent()
+        .prev()
+        .attr("checked", true);
     }
   });
 
   // when the user wants to delete a theme, set the theme id to the modal so that the modal knows what it's targeting
-  $('label.deleteTheme').on('click', function(e) {
+  $("label.deleteTheme").on("click", function (e) {
     if ($(this).parent().parent().attr("verified") === "true") {
-      useAlert("warning","You are deleting a verified theme!",5000)
+      useAlert("warning", "You are deleting a verified theme!", 5000);
     }
-    $('label[for=confirmModal].modal').attr('data-themeIDX',$(this).attr('data-themeIDX'))
-  })
-  
+    $("label[for=confirmModal].modal").attr(
+      "data-themeIDX",
+      $(this).attr("data-themeIDX")
+    );
+  });
+
   // when the user confirms deletion, remove the index of the theme from storage.
   // the index is found with the data-themeIDX attribute on the modal
-  $('label[for=confirmModal] button.yes').on('click', function(e) {
-    chrome.storage.sync.get(['themes'], (data) => {
-      let idx = parseInt($(this).parent().parent().parent().attr('data-themeIDX'))
-      data.themes.splice(idx)
-      chrome.storage.sync.set({"themes": data.themes})
-    })
+  $("label[for=confirmModal] button.yes").on("click", function (e) {
+    chrome.storage.sync.get(["themes"], (data) => {
+      let idx = parseInt(
+        $(this).parent().parent().parent().attr("data-themeIDX")
+      );
+      data.themes.splice(idx);
+      chrome.storage.sync.set({ themes: data.themes });
+    });
     // closes the modal
     $("input#confirmModal").trigger("click");
-    useAlert("success","Theme deleted! Reopen the extension to reflect changes.", 5000)
-  })
-  
+    useAlert(
+      "success",
+      "Theme deleted! Reopen the extension to reflect changes.",
+      5000
+    );
+  });
+
   // when the user changes their mind about deleting a theme
-  $('label[for=confirmModal] button.no').on('click', function(e) {
+  $("label[for=confirmModal] button.no").on("click", function (e) {
     // closes the modal
     $("input#confirmModal").trigger("click");
-  })
-  
-  
+  });
+
   // when the user wants to delete a theme, set the theme id to the modal so that the modal knows what it's targeting
-  $('label.editTheme').on('click', function(e) {
-    tempColors = userColors
-    $('label[for=editColorModal].modal').attr('data-themeIDX',$(this).attr('data-themeIDX'))
+  $("label.editTheme").on("click", function (e) {
+    tempColors = userColors;
+    $("label[for=editColorModal].modal").attr(
+      "data-themeIDX",
+      $(this).attr("data-themeIDX")
+    );
     chrome.storage.sync.get(["themes"], (data) => {
       // if the user is editing a verified theme, give a warning
-      if (data.themes[$(this).attr('data-themeIDX')].verified) useAlert("warning","You are editing a verified theme!",5000)
-      $('label[for=editColorModal] label.colorPreview').each((i, el) => {
-        $(el).css("background", data.themes[$(this).attr('data-themeIDX')].colors[$(el).attr("data-color")]);
-        $(el).prev().css("color", data.themes[$(this).attr('data-themeIDX')].colors[$(el).attr("data-color")]);  
-      })
-    })
-  })
+      if (data.themes[$(this).attr("data-themeIDX")].verified)
+        useAlert("warning", "You are editing a verified theme!", 5000);
+      $("label[for=editColorModal] label.colorPreview").each((i, el) => {
+        $(el).css(
+          "background",
+          data.themes[$(this).attr("data-themeIDX")].colors[
+            $(el).attr("data-color")
+          ]
+        );
+        $(el)
+          .prev()
+          .css(
+            "color",
+            data.themes[$(this).attr("data-themeIDX")].colors[
+              $(el).attr("data-color")
+            ]
+          );
+      });
+    });
+  });
 
   //TODO: make it so the colors dont update when editing a theme that is not currently applied
-  
-  $('.confirmEdit').on('click', function(e) {
+
+  $(".confirmEdit").on("click", function (e) {
     $("input#editColorModal").trigger("click");
-    let newColors = {}
+    let newColors = {};
     $("label[for=editColorModal] .colorPreview").each((i, el) => {
-      newColors[$(el).attr("data-color")] = $(el).css('background')
-    })
+      newColors[$(el).attr("data-color")] = $(el).css("background");
+    });
     chrome.storage.sync.get(["themes"], (data) => {
-      data.themes[$('label[for=editColorModal]').attr('data-themeidx')].colors = newColors
-      chrome.storage.sync.set({themes: data.themes})
-    })
-    useAlert("success","Theme successfully edited! Reopen extension window to reflect changes.", 5000)
-  })
-  $('.cancelEdit').on('click', function(e) {
+      data.themes[$("label[for=editColorModal]").attr("data-themeidx")].colors =
+        newColors;
+      chrome.storage.sync.set({ themes: data.themes });
+    });
+    useAlert(
+      "success",
+      "Theme successfully edited! Reopen extension window to reflect changes.",
+      5000
+    );
+  });
+  $(".cancelEdit").on("click", function (e) {
     $("input#editColorModal").trigger("click");
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, {
@@ -275,8 +338,7 @@ chrome.storage.sync.get(["themes"], (data) => {
         newColors: tempColors,
       });
     });
-  })
-
+  });
 });
 
 // loads in previous colors if they exist, else default colors
@@ -302,13 +364,12 @@ $("#spectrum").spectrum({
   showInput: true,
   preferredFormat: "hex",
   move: (c) => {
-
     // if the user has a theme selected and changes a theme color, unapply the theme so it doesn't look like they're editing the theme
-    if ($('input[name=theme]').is(":checked")) {
-      $('input[name=theme]:checked').prop("checked", false)
+    if ($("input[name=theme]").is(":checked")) {
+      $("input[name=theme]:checked").prop("checked", false);
       chrome.storage.sync.set({ currentThemeNum: "" });
     }
-    
+
     // the color spectrum is targeting
     let colorType = $("label.MAIN[data-color]").attr("data-color");
     userColors[colorType] = c.toHexString();
@@ -321,6 +382,18 @@ $("#spectrum").spectrum({
       .prev()
       .css("color", c.toHexString());
 
+    // checks global enable button if disabled
+    $(".globalEnable").prop("checked", true);
+    chrome.storage.sync.set({ enabled: true });
+    chrome.storage.sync.get(["enabled"], (data) => {
+      chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+        chrome.tabs.sendMessage(tabs[0].id, {
+          action: "enable",
+          mode: data.enabled,
+        });
+      });
+    });
+
     // updates in the front end
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, {
@@ -330,7 +403,6 @@ $("#spectrum").spectrum({
     });
   },
 });
-
 
 // since there is only one spectrum modal, set the data attribute of the color it's changing so it knows what to target
 $(".colorPreview").on("click", function (e) {
@@ -353,53 +425,51 @@ $(".sp-button-container.sp-cf").detach().appendTo(".sp-input-container.sp-cf");
 // TODO: add a way to submit to the github your custom themes?
 
 //TODO: cancel theme submit button
-$('label[for=toGithubModal].toGithub').on('click', function(e) {
+$("label[for=toGithubModal].toGithub").on("click", function (e) {
   chrome.storage.sync.get(["themes"], (data) => {
-    if (data.themes.every(el => el.verified == true)) {
-      $('input#toGithubModal').trigger('click')
-      useAlert("error", "You need to make a new theme first!", 3000)
-      return
+    if (data.themes.every((el) => el.verified == true)) {
+      $("input#toGithubModal").trigger("click");
+      useAlert("error", "You need to make a new theme first!", 3000);
+      return;
     }
-    $("label[for=toGithubModal] .container").empty()
-    $("label[for=toGithubModal] h1").show()
-    $(".pasteMessage").hide()
+    $("label[for=toGithubModal] .container").empty();
+    $("label[for=toGithubModal] h1").show();
+    $(".pasteMessage").hide();
     data.themes.forEach((el, i) => {
-      if (el.verified) return
+      if (el.verified) return;
       $(`<button class="themeSubmitOption btn btn-sm w-full mb-2" data-themeIDX="${i}">
       ${el.name}
-      </button>`).appendTo('label[for=toGithubModal].modal h1 + div')
-    })
-    $('.themeSubmitOption').on('click', function(e) {
+      </button>`).appendTo("label[for=toGithubModal].modal h1 + div");
+    });
+    $(".themeSubmitOption").on("click", function (e) {
       chrome.storage.sync.get(["themes"], (data) => {
         //TODO: get rid of cancel button, get textarea window with link to form
         // https://docs.google.com/forms/d/e/1FAIpQLSe_UoYmPhYp0attrSOfkD9wTuKcJaYobyLp0afcJ5oBWLiarQ/viewform?usp=sf_link
-        let theme = data.themes[$(this).attr('data-themeIDX')]
-        $("label[for=toGithubModal] .container").empty()
-        $("label[for=toGithubModal] h1").hide()
-        $(/*html*/`
+        let theme = data.themes[$(this).attr("data-themeIDX")];
+        $("label[for=toGithubModal] .container").empty();
+        $("label[for=toGithubModal] h1").hide();
+        $(/*html*/ `
           <div class="scrollbar text-sm w-full bg-neutral rounded-xl p-5 h-[260px] overflow-y-scroll">
             ${JSON.stringify(theme, null, 2)}
           </div>
-          `).appendTo("label[for=toGithubModal] .container")
-        $(".pasteMessage").show()
-      })
-    })
-    $("label[for=toGithubModal] button.no").on('click', function(e) {
-      $('input#toGithubModal').trigger('click')
-    })
-  })
-})
-
+          `).appendTo("label[for=toGithubModal] .container");
+        $(".pasteMessage").show();
+      });
+    });
+    $("label[for=toGithubModal] button.no").on("click", function (e) {
+      $("input#toGithubModal").trigger("click");
+    });
+  });
+});
 
 // when the user hasn't entered a name for their new theme, the option will read cancel, else it will read save
-$('input.customName').on('input', function(e) {
+$("input.customName").on("input", function (e) {
   if (!$(this).val()) {
-    $(this).parent().next().next().text("Cancel")
+    $(this).parent().next().next().text("Cancel");
   } else {
-    $(this).parent().next().next().text("Save")
+    $(this).parent().next().next().text("Save");
   }
-})
-
+});
 
 // when you click to save a new theme, this hides the button and shows the input and submit button
 $("button.newTheme").on("click", function (e) {
@@ -411,62 +481,83 @@ $("button.newTheme").on("click", function (e) {
 $(".saveTheme").on("click", function (e) {
   $(this).parent().toggle();
   $(this).parent().prev().toggle();
-  
+
   // get the new theme
   let newTheme = {
-    name: $('input.customName').val(),
-    img: $('input.customURL').val() || "",
+    name: $("input.customName").val(),
+    img: $("input.customURL").val() || "",
     colors: {},
-    verified: false
-  }
+    verified: false,
+  };
 
   // append each color for new theme
-  $('label.colorPreview').each((i, el) => {
-    newTheme.colors[$(el).attr('data-color')] = $(el).css("background-color")
-  })
+  $("label.colorPreview").each((i, el) => {
+    newTheme.colors[$(el).attr("data-color")] = $(el).css("background-color");
+  });
 
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-    chrome.tabs.sendMessage(tabs[0].id, {
-      action: "getCurrentGradient",
-    }, (res) => {
-      newTheme.colors["--sideColorGradient"] = res.currentGradient
+    chrome.tabs.sendMessage(
+      tabs[0].id,
+      {
+        action: "getCurrentGradient",
+      },
+      (res) => {
+        newTheme.colors["--sideColorGradient"] = res.currentGradient;
 
-      // add the new theme to the themes in storage
-      chrome.storage.sync.get(['themes'], (data) => {
-        chrome.storage.sync.set({"themes": [...data.themes, newTheme]})
-      })
-    });
+        // add the new theme to the themes in storage
+        chrome.storage.sync.get(["themes"], (data) => {
+          chrome.storage.sync.set({ themes: [...data.themes, newTheme] });
+        });
+      }
+    );
   });
 
   if ($(this).text() !== "Cancel") {
-    useAlert("success", "Theme created! Reopen the extension window to reflect changes.", 5000)
+    useAlert(
+      "success",
+      "Theme created! Reopen the extension window to reflect changes.",
+      5000
+    );
   }
 });
 
 // if the user alr has a gradient set from a coolors url, put the url in the input boc
 chrome.storage.sync.get(["gradientUrl"], (data) => {
-  $(".submitCOOLORS").prev().val(data.gradientUrl || "")
-})
+  $(".submitCOOLORS")
+    .prev()
+    .val(data.gradientUrl || "");
+});
 
 // get gradient enabled state and check the box
 chrome.storage.sync.get(["gradient"], (data) => {
   if (data.gradient) {
-    $('.enableGradient').prop("checked", true)
+    $(".enableGradient").prop("checked", true);
   } else {
-    $('.enableGradient').prop("checked", false)
+    $(".enableGradient").prop("checked", false);
   }
-})
+});
 
 // gets the speed from storage and updates the slider
 chrome.storage.sync.get(["gradientSpeed"], (data) => {
-  $(".rangeSlider").attr("value", data.gradientSpeed)
-})
+  $(".rangeSlider").attr("value", data.gradientSpeed);
+});
 
 // enables or disables the gradient with the checkbox
-$('.enableGradient').on('change', function(e) {
-  if ($(this).is(':checked')) {
+$(".enableGradient").on("change", function (e) {
+  // checks global enable button if disabled
+  $(".globalEnable").prop("checked", true);
+  chrome.storage.sync.set({ enabled: true });
+  chrome.storage.sync.get(["enabled"], (data) => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      chrome.tabs.sendMessage(tabs[0].id, {
+        action: "enable",
+        mode: data.enabled,
+      });
+    });
+  });
+  if ($(this).is(":checked")) {
     // toggles gradient on
-    chrome.storage.sync.set({gradient: true})
+    chrome.storage.sync.set({ gradient: true });
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, {
         action: "toggleGradient",
@@ -475,7 +566,7 @@ $('.enableGradient').on('change', function(e) {
     });
   } else {
     // toggles gradient off
-    chrome.storage.sync.set({gradient: false})
+    chrome.storage.sync.set({ gradient: false });
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, {
         action: "toggleGradient",
@@ -483,11 +574,11 @@ $('.enableGradient').on('change', function(e) {
       });
     });
   }
-})
+});
 
 // when the slider is changed, send message to front end and update storage
-$(document).on('input change', '.rangeSlider', function() {
-  let val = $(this).val()
+$(document).on("input change", ".rangeSlider", function () {
+  let val = $(this).val();
   if (val == 0) {
     // if the slider is all the way to the left, make the gradient static
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -507,19 +598,24 @@ $(document).on('input change', '.rangeSlider', function() {
       });
     });
   }
-  chrome.storage.sync.set({"gradientSpeed": val})
+  chrome.storage.sync.set({ gradientSpeed: val });
 });
 
 // I like these colors  https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51
 
 // when the user clicks on the go button
-$('.submitCOOLORS').on('click', function(e) {
+$(".submitCOOLORS").on("click", function (e) {
   // return if no value
-  if (!$(this).prev().val()) {alert("Enter a URL from coolors.co!"); return}
+  if (!$(this).prev().val()) {
+    alert("Enter a URL from coolors.co!");
+    return;
+  }
 
   // gets the hex codes from the url
-  let gradientColors = $(this).prev().val().match(/(\w{6})(?=-|$)/gm)
-  
+  let gradientColors = $(this)
+    .prev()
+    .val()
+    .match(/(\w{6})(?=-|$)/gm);
 
   // FIXME: new feature maybe??
   // gradientColors.forEach((el) => {
@@ -530,16 +626,18 @@ $('.submitCOOLORS').on('click', function(e) {
   // })
 
   //sets the url to storage
-  chrome.storage.sync.set({gradientUrl: $(this).prev().val()})
+  chrome.storage.sync.set({ gradientUrl: $(this).prev().val() });
 
-  let gradient = "linear-gradient(0deg,"
+  let gradient = "linear-gradient(0deg,";
   // using a loop to append each hex code to the above string
   gradientColors.forEach((el, i) => {
-    i+1 === gradientColors.length ? gradient += `#${el})` : gradient += `#${el},`
-  })
+    i + 1 === gradientColors.length
+      ? (gradient += `#${el})`)
+      : (gradient += `#${el},`);
+  });
 
   // sets the gradient to storage
-  userColors["--sideColorGradient"] = gradient
+  userColors["--sideColorGradient"] = gradient;
   chrome.storage.sync.set({ colors: userColors });
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     chrome.tabs.sendMessage(tabs[0].id, {
@@ -547,43 +645,47 @@ $('.submitCOOLORS').on('click', function(e) {
       newColors: userColors,
     });
   });
-})
+});
 
-$('label[for=confirmImportModal] button.no').on('click', function(e) {
-  $('input#confirmImportModal').trigger('click')
-})
-$('label[for=confirmImportModal] button.yes').on('click', function(e) {
-  $('input#themeInput').trigger('click')
-  $('input#themeInput').on('change',() => {
-    let importedThemes
-    let file = $('input#themeInput').prop('files')[0]
+$("label[for=confirmImportModal] button.no").on("click", function (e) {
+  $("input#confirmImportModal").trigger("click");
+});
+$("label[for=confirmImportModal] button.yes").on("click", function (e) {
+  $("input#themeInput").trigger("click");
+  $("input#themeInput").on("change", () => {
+    let importedThemes;
+    let file = $("input#themeInput").prop("files")[0];
     var reader = new FileReader();
-    reader.onload = function(e){
+    reader.onload = function (e) {
       try {
-        importedThemes = JSON.parse(e.target.result)
-        if ($('input#overwriteImports').is(":checked")) {
-          chrome.storage.sync.set({themes: importedThemes})
+        importedThemes = JSON.parse(e.target.result);
+        if ($("input#overwriteImports").is(":checked")) {
+          chrome.storage.sync.set({ themes: importedThemes });
         } else {
           chrome.storage.sync.get(["themes"], (data) => {
-            data.themes = [...data.themes, ...importedThemes]
-            chrome.storage.sync.set({themes: data.themes})
-          })
+            data.themes = [...data.themes, ...importedThemes];
+            chrome.storage.sync.set({ themes: data.themes });
+          });
         }
-        useAlert("success", "Successfully exported themes! Reopen extension window to reflect changes.", 5000)
+        useAlert(
+          "success",
+          "Successfully exported themes! Reopen extension window to reflect changes.",
+          5000
+        );
       } catch {
-        useAlert("error", "File does not contain valid JSON!", 3000)
+        useAlert("error", "File does not contain valid JSON!", 3000);
       }
-    }
+    };
     reader.readAsText(file);
-  })
-  $('input#confirmImportModal').trigger('click')
-})
+  });
+  $("input#confirmImportModal").trigger("click");
+});
 
-$(".globalEnable").on('change', function(e) {
+$(".globalEnable").on("change", function (e) {
   if ($(this).is(":checked")) {
-    chrome.storage.sync.set({enabled: true})
+    chrome.storage.sync.set({ enabled: true });
   } else {
-    chrome.storage.sync.set({enabled: false})
+    chrome.storage.sync.set({ enabled: false });
   }
   chrome.storage.sync.get(["enabled"], (data) => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -592,12 +694,23 @@ $(".globalEnable").on('change', function(e) {
         mode: data.enabled,
       });
     });
-  })
-})
+  });
+});
+
+// sets global enable button state
+chrome.storage.sync.get(["enabled"], (data) => {
+  $(".globalEnable").prop("checked", data.enabled);
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    chrome.tabs.sendMessage(tabs[0].id, {
+      action: "enable",
+      mode: data.enabled,
+    });
+  });
+});
 
 // when the user clicks to export their themes, get the themes from storage and send a message to download them
-$('button.export').on('click', function(e) {
-  chrome.storage.sync.get(['themes'], (data) => {
+$("button.export").on("click", function (e) {
+  chrome.storage.sync.get(["themes"], (data) => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
       chrome.tabs.sendMessage(tabs[0].id, {
         action: "downloadFile",
@@ -606,16 +719,20 @@ $('button.export').on('click', function(e) {
         contentType: "application/json",
       });
     });
-  })
-  useAlert("success", "Successfully exported!", 3000)
-})
+  });
+  useAlert("success", "Successfully exported!", 3000);
+});
 
-$('label[for=resetAllSettingsModal] button.yes').on('click', () => {
-  chrome.storage.sync.clear()
-  useAlert("success", "PMC Settings Reset! Refresh the page to reflect changes.", 5000)
-  $('input#resetAllSettingsModal').trigger('click')
-})
+$("label[for=resetAllSettingsModal] button.yes").on("click", () => {
+  chrome.storage.sync.clear();
+  useAlert(
+    "success",
+    "PMC Settings Reset! Refresh the page to reflect changes.",
+    5000
+  );
+  $("input#resetAllSettingsModal").trigger("click");
+});
 
-$('label[for=resetAllSettingsModal] button.no').on('click', () => {
-  $('input#resetAllSettingsModal').trigger('click')
-})
+$("label[for=resetAllSettingsModal] button.no").on("click", () => {
+  $("input#resetAllSettingsModal").trigger("click");
+});
