@@ -103,5 +103,26 @@
 			"--iconColor": "#ffffff",
 			"--slimborderfixColor": "#c7cdd1"
 		}
+	},
+	{
+		"colors": {
+			"--backgroundColor": "rgb(239, 247, 236)",
+			"--buttonBackColor": "rgb(1, 36, 28)",
+			"--dangerColor": "rgb(184, 0, 40)",
+			"--hoverColor": "rgb(202, 225, 174)",
+			"--iconColor": "rgb(239, 247, 236)",
+			"--minorsideColor": "rgb(110, 170, 126)",
+			"--minortextColor": "rgb(239, 247, 236)",
+			"--newNotifColor": "rgb(3, 191, 98)",
+			"--secondarybackgroundColor": "rgb(110, 170, 126)",
+			"--sideColor": "rgb(1, 36, 28)",
+			"--sideColorGradient": "rgb(1, 36, 28) none repeat scroll 0% 0% / 100% 100% padding-box border-box",
+			"--slimborderFixColor": "rgb(1, 36, 28)",
+			"--tertiarybackgroundColor": "rgb(170, 213, 159)",
+			"--textColor": "rgb(1, 36, 28)"
+		},
+		"img": "https://dropovercl.s3.amazonaws.com/e6b0cbeb-a8c7-4966-95bf-470a96f79898/6cc4a1da-a62e-4e33-8bde-a143ecca4893/9063fe47-be89-4392-bdbd-a24faf01ae94.png",
+		"name": "Green Goddess",
+		"verified": true
 	}
 ]
