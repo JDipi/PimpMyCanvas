@@ -105,6 +105,9 @@
 		}
 	},
 	{
+	"img": "https://dropovercl.s3.amazonaws.com/e6b0cbeb-a8c7-4966-95bf-470a96f79898/6cc4a1da-a62e-4e33-8bde-a143ecca4893/9063fe47-be89-4392-bdbd-a24faf01ae94.png",
+	"name": "Green Goddess",
+	"verified": false,
 		"colors": {
 			"--backgroundColor": "rgb(239, 247, 236)",
 			"--buttonBackColor": "rgb(1, 36, 28)",
@@ -120,9 +123,6 @@
 			"--slimborderFixColor": "rgb(1, 36, 28)",
 			"--tertiarybackgroundColor": "rgb(170, 213, 159)",
 			"--textColor": "rgb(1, 36, 28)"
-		},
-		"img": "https://dropovercl.s3.amazonaws.com/e6b0cbeb-a8c7-4966-95bf-470a96f79898/6cc4a1da-a62e-4e33-8bde-a143ecca4893/9063fe47-be89-4392-bdbd-a24faf01ae94.png",
-		"name": "Green Goddess",
-		"verified": true
+		}
 	}
 ]
